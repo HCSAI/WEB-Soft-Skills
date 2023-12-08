@@ -1,0 +1,231 @@
+html {
+    scroll-behavior: smooth;
+  }
+#head{
+    width: 50vw;
+    position: fixed;
+    top: 0;
+    left: 25vw;
+    z-index: 100;
+}
+#body{
+    width: 500px;
+    height: 682px;
+    position: fixed;
+    margin-left: calc(50vw - 250px);
+    margin-top: var(--margin-top);
+    font-family: 'Cousine', monospace !important;
+    background-color: #648464;
+    border-radius: 15px;
+    z-index: 99;
+}
+body{
+    overflow-x: hidden;
+    background-color: #E4FBEC;
+}
+::-webkit-scrollbar{
+display: none;
+}
+:root{
+    --margin-top: -700px;
+}
+@keyframes infomove {
+    from{
+        margin-top: -700px;
+    }
+    to{
+        margin-top: 10vw;
+    }
+}
+@keyframes infoback {
+    from{
+        margin-top: 10vw;
+    }
+    to{
+        margin-top: -700px;
+    }
+}
+#group-info{
+    position: relative;
+    display: flex;
+    flex: 2;
+    margin: 10px;
+    width: fit-content;
+    /* height: calc(662px - calc(682px + var(--margin-top) - 100vh)); */
+    height: auto;
+    flex-direction: column;
+    gap: 50px;
+    overflow-y: scroll;
+}
+#leader{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+#leader-info{
+    font-size: 20px;
+    color: white;
+}
+#leader-img{
+    width: 120px;
+}
+#members{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 30px;
+    width: 481px;
+}
+.member{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.member-info{
+    width: fit-content;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+}
+.member-img{
+    width: 100px;
+}
+.member-info{
+    width: fit-content;
+}
+#below{
+    width: 100vw;
+    top: 5vw;
+    left: 0;
+    position: absolute;
+}
+#face-img1{
+    height: 30vw;
+    margin-top: 5vw;
+    margin-left: calc(50vw - 30vw*1200/699/2);
+    border-radius: 0.5vw;
+    transition-duration: 750ms;
+}
+#face-img2{
+    height: 30vw;
+    margin-top: 5vw;
+    margin-left: calc(50vw - 30vw*2048/1518/2);
+    border-radius: 0.5vw;
+    transition-duration: 750ms;
+}
+#face-img1:hover{
+    height: 40vw;
+    margin-left: calc(50vw - 40vw*1200/699/2);
+    transition-duration: 750ms;
+}
+#face-img2:hover{
+    height: 40vw;
+    margin-left: calc(50vw - 40vw*2048/1518/2);
+    transition-duration: 750ms;
+}
+#face-img1:disabled{
+    height: 100vw;
+}
+#board{
+    width: 80vw;
+    height: 80vh;
+    margin: calc(10vh - 2vw) 10vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 4vw;
+    border-radius: 0.5vw;
+    /* background-color: #da2c38; */
+    /* background:linear-gradient( to left, #43291f 0, #43291f 33.3%, #226f54 33.3%, #226f54 66.6%, #da2c38 66.6%, #da2c38 )no-repeat; */
+}
+#board img{
+    width: 36vw;
+    height: 27vw;
+    border-radius: 0.5vw;
+}
+#board img:hover{
+    transform: scale(1.15);
+    transition-duration: 500ms;
+    z-index: 20;
+}
+#img1{
+    transform:rotate(-5deg);
+    transition-duration: 500ms;
+}
+#img4{
+    transform:rotate(3deg);
+    transition-duration: 500ms;
+}
+#img5{
+    transform:rotate(2deg);
+    transition-duration: 500ms;
+}
+.img{
+    display: none;
+    width: 50vw;
+    border-radius: 0.5vw;
+    margin: calc(50vh - 3/4*25vw) 10vw;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+}
+@keyframes fade {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 100;
+    }
+}
+#block{
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    display: none;
+}
+.paper{
+    position: fixed;
+    width: 30vw;
+    top: calc(50vh - 19vw);
+    border-radius: 0.5vw;
+    margin-left: 62vw;
+    z-index: 10000;
+}
+.pp{
+    top:0;
+    display: none;
+}
+.text{
+    width: 28vw;
+    color: #E4FBEC;
+    text-align: justify;
+    margin-left: 63vw;
+    position: fixed;
+    margin-top: calc(50vh - 18.5vw);
+    font-size: 1.6vw;
+    z-index: 10001;
+}
+#hopdong img{
+    width: 1080px;
+    position: relative;
+    flex-direction: column;
+    transition-duration: 500ms;
+}
+#hopdong{
+    position: absolute;
+    margin: 140vw calc(50vw - 540px);
+    flex-direction: column;
+    display: flex;
+}
+#hopdong img:hover{
+    transform: scale(1.05);
+    transition-duration: 500ms;
+}
